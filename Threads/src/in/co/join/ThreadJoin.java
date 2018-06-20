@@ -1,0 +1,20 @@
+package in.co.join;
+
+public class ThreadJoin extends Thread {
+
+	public void run() {
+
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		}
+
+		MThreadJoin.names.add(getName());
+
+	}
+
+}
